@@ -1,33 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); /* font를 추가한다. 이 경로는 google font에서 가져왔다. */
+@import "reset.css"; /* 브라우저의 기본 CSS를 지우기 위한 CSS파일을 추가한다. */
+@import "status-bar.css"; /* status-bar에 대한 CSS를 다른 파일로 분리하였다. */
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif; /*  */
 }
 
-.status-bar {
-  display: flex; /* status-bar 의 box들이 한줄로 오도록 만들기 위해 사용 */
-  /*justify-content: space-between; /* status bar의 각 영역을 화면 크기에 따라 분할하기 위해 */
-  justify-content: center;
-}
-
-.status-bar__column {
-  width: 33%;
-}
-
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-
-.status-bar__column:nth-child(2) {
+.welcome-header {
+  margin: 90px 0px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* 이 부분을 쓰지 않으면 가로 기준으로 정렬된다. */
+  align-items: center;
+  margin-top: 145px;
+  text-align: center;
 }
 
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
+.welcome-header__title {
+  margin-bottom: 40px;
+  font-size: 25px;
 }
 
-.status-bar__column .fa-battery-full {
-  margin: 0px 5px;
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
 }
