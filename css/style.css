@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); /* font를 추가한다. 이 경로는 google font에서 가져왔다. */
 @import "reset.css"; /* 브라우저의 기본 CSS를 지우기 위한 CSS파일을 추가한다. */
 @import "status-bar.css"; /* status-bar에 대한 CSS를 다른 파일로 분리하였다. */
+@import "variables.css"; /* 색상 변수를 지정한 css파일*/
 
 body {
   font-family: "Open Sans", sans-serif; /*  */
@@ -31,11 +32,17 @@ body {
   margin: 0px 30px;
 }
 
+#login-form input:not([type="submit"]) {
+  /* [] 사이에 쓰인 것들은 특성 선택자임. */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
 #login-form input {
   padding: 10px 0px;
   border: none;
   font-size: 18px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
   margin-bottom: 20px;
 }
 
@@ -44,6 +51,20 @@ body {
 }
 
 #login-form input:focus {
-  outline: none;
-  border-color: rgba(0, 0, 0, 0.4);
+  outline: none; /* out line을 제거해야 설정한 Border가 보인다.*/
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: progress;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /* 부모로부터 색상을 상속받음.*/
+  font-size: 13px;
 }
