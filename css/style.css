@@ -5,6 +5,7 @@
 /* Components */
 @import "components/status-bar.css"; /* status-bar에 대한 CSS를 다른 파일로 분리하였다. */
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
 
 /* Screens */
 @import "screens/login.css";
