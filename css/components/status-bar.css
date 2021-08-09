@@ -1,4 +1,7 @@
 .status-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex; /* status-bar 의 box들이 한줄로 오도록 만들기 위해 사용 */
   /*justify-content: space-between; /* status bar의 각 영역을 화면 크기에 따라 분할하기 위해 */
   justify-content: center;

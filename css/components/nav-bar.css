@@ -1,0 +1,46 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative; /* 하단에 absolute 설정 하기 전에, 부모로 설정하기 위해 설정 */
+  color: #2e363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  border-radius: 15px; /* 원으로 만들고 싶으면 width/2 */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__notification__dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+
+  border-radius: 3px;
+  position: absolute;
+  right: -4px;
+  top: -15px;
+}

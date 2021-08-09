@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); /* font를 추가한다. 이 경로는 google font에서 가져왔다. */
 @import "reset.css"; /* 브라우저의 기본 CSS를 지우기 위한 CSS파일을 추가한다. */
-@import "components/status-bar.css"; /* status-bar에 대한 CSS를 다른 파일로 분리하였다. */
 @import "variables.css"; /* 색상 변수를 지정한 css파일*/
+
+/* Components */
+@import "components/status-bar.css"; /* status-bar에 대한 CSS를 다른 파일로 분리하였다. */
+@import "components/nav-bar.css";
+
+/* Screens */
 @import "screens/login.css";
 
 body {
